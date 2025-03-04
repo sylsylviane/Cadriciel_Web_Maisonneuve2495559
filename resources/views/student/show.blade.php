@@ -12,14 +12,12 @@
             <p class="card-text mb-1"><strong>Téléphone: </strong>{{ $student->phone }}</p>
             <p class="card-text mb-1"><strong>Courriel: </strong>{{ $student->email }}</p>
             <p class="card-text mb-1"><strong>Date de naissance: </strong>{{ $student->dob }}</p>
-
-            <p class="card-text mb-1"><strong>Ville: </strong>{{ $student->city_id }}</p>
-
+            <p class="card-text mb-1"><strong>Ville: </strong>{{ $student->city->name }}</p>
         </div>
         <div class="card-footer">
             <div class="d-flex justify-content-between">
-                <i class="bi bi-pencil-square text-success" style="font-size: 1.5rem"></i>
-                <i class="bi bi-trash3 text-danger" style="font-size: 1.5rem"></i>
+                <i class="bi bi-pencil-square" style="font-size: 1.5rem"></i>
+                <i class="bi bi-trash3 telx" style="font-size: 1.5rem"></i>
             </div>
         </div>
     </div>
