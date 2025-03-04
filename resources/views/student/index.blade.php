@@ -15,9 +15,7 @@
                 <p class="card-text mb-1"><strong>Téléphone: </strong>{{ $student->phone }}</p>
                 <p class="card-text mb-1"><strong>Courriel: </strong>{{ $student->email }}</p>
                 <p class="card-text mb-1"><strong>Date de naissance: </strong>{{ $student->dob }}</p>
-
-                <p class="card-text mb-1"><strong>Ville: </strong>{{ $student->city_id }}</p>
-
+                <p class="card-text mb-1"><strong>Ville: </strong>{{ $student->city->name }}</p>
             </div>
             <div class="card-footer">
                 <div class="d-flex justify-content-center">
