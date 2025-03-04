@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Student;
+use App\Models\City;
 use Illuminate\Http\Request;
+use PHPUnit\Framework\MockObject\Builder\Stub;
 
 class StudentController extends Controller
 {
@@ -21,7 +23,8 @@ class StudentController extends Controller
      */
     public function create() 
     {
-        //
+        $cities = City::all();
+        return view('student.create', ['cities' => $cities]);
     }
 
     /**
@@ -29,7 +32,25 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required|string|max:191',
+            'address' => 'required|string|max:191',
+            'phone' => 'required|string|max:191',
+            'email' => 'required|email|max:191',
+            'dob' => 'required|date|before:today',
+            'city_id' => 'required'
+        ]);
+
+        $student = Student::create([
+            'name' => $request->name,
+            'address' => $request->address,
+            'phone' => $request->phone,
+            'email' => $request->email,
+            'dob' => $request->dob,
+            'city_id' => $request->city_id
+        ]);
+
+        return redirect()->route('student.show', $student->id)->with('success', 'L\'étudiant a été créé.');
     }
 
     /**
@@ -45,7 +66,8 @@ class StudentController extends Controller
      */
     public function edit(Student $student)
     {
-        //
+        $cities = City::all();
+        return view('student.edit', ['student' => $student, 'cities' => $cities]);
     }
 
     /**
@@ -53,7 +75,25 @@ class StudentController extends Controller
      */
     public function update(Request $request, Student $student)
     {
-        //
+        $request->validate([
+            'name' => 'required|string|max:191',
+            'address' => 'required|string|max:191',
+            'phone' => 'required|string|max:191',
+            'email' => 'required|email|max:191',
+            'dob' => 'required|date|before:today',
+            'city_id' => 'required'
+        ]);
+
+        $student->update([
+            'name' => $request->name,
+            'address' => $request->address,
+            'phone' => $request->phone,
+            'email' => $request->email,
+            'dob' => $request->dob,
+            'city_id' => $request->city_id
+        ]);
+
+        return redirect()->route('student.show', $student->id)->with('success', 'Les informations de l\'étudiant ont été modifiés.');
     }
 
     /**
