@@ -11,7 +11,7 @@
 </head>
 
 <body class="d-flex flex-column min-vh-100">
-<!-- NAVIGATION -->
+    <!-- NAVIGATION -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="{{route('accueil')}}">{{ config('app.name' )}}</a>
@@ -20,18 +20,25 @@
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item"><a class="nav-link" href="{{route('accueil')}}">Accueil</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{route('students.index')}}">Étudiants</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{route('student.create')}}">Ajouter un étudiant</a></li>
                     <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Blog</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-<!-- CONTENU -->
+    
+    <!-- CONTENU -->
     <main class="flex-grow-1 bg-light">
+        @if(session('success'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{session('success')}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        @endif
         @yield('content')
     </main>
 
-<!-- FOOTER-->
+    <!-- FOOTER-->
     <footer class="py-5 bg-dark">
         <div class="container">
             <p class="m-0 text-center text-white">Tous droits réservés &copy; {{ config('app.name')}} - {{date('Y')}}</p>
