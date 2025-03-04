@@ -12,4 +12,11 @@ class City extends Model
     protected $fillable = [
         'name'
     ];
+
+    /**
+     * Permet de définir et d'accéder aux étudiants qui appartiennent à une ville donnée
+     */
+    public function students(){
+        return $this->hasMany(Student::class);
+    }
 }
