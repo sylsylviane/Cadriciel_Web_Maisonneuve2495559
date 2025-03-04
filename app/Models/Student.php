@@ -17,4 +17,11 @@ class Student extends Model
         'dob',
         'city_id'
     ];
+
+    /**
+     * Permet de définir et d'accéder à la ville à laquelle un étudiant appartient
+     */
+    public function city(){
+        return $this->belongsTo(City::class);
+    }
 }
