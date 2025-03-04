@@ -16,7 +16,7 @@
         </div>
         <div class="card-footer">
             <div class="d-flex justify-content-between">
-                <i class="bi bi-pencil-square" style="font-size: 1.5rem; color: green"></i>
+                <a href="{{route('student.edit', $student->id)}}"><i class="bi bi-pencil-square" style="font-size: 1.5rem; color: green"></i></a>
                 <i class="bi bi-trash3 telx" style="font-size: 1.5rem; color:red"></i>
             </div>
         </div>
