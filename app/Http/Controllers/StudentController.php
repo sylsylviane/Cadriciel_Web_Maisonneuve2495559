@@ -10,7 +10,7 @@ use PHPUnit\Framework\MockObject\Builder\Stub;
 class StudentController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Afficher la liste des étudiants.
      */
     public function index()
     {
@@ -19,7 +19,7 @@ class StudentController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Afficher le formulaire pour créer un nouvel étudiant.
      */
     public function create() 
     {
@@ -28,7 +28,7 @@ class StudentController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Créer un nouvel étudiant dans la base de données et valider les données du formulaire.
      */
     public function store(Request $request)
     {
@@ -54,7 +54,7 @@ class StudentController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Afficher l'étudiant spécifié.
      */
     public function show(Student $student)
     {
@@ -62,7 +62,7 @@ class StudentController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Afficher le formulaire pour modifier l'étudiant spécifié.
      */
     public function edit(Student $student)
     {
@@ -71,7 +71,7 @@ class StudentController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Modifier l'étudiant spécifié dans la base de données et valider les données du formulaire.
      */
     public function update(Request $request, Student $student)
     {
@@ -97,10 +97,12 @@ class StudentController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Supprimer l'étudiant spécifié de la base de données.
      */
     public function destroy(Student $student)
     {
-        //
+        $id = $student->id;
+        $student->delete();
+        return redirect()->route('student.index')->with('success', 'L\'étudiant a été supprimé.');
     }
 }
