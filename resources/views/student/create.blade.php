@@ -1,9 +1,17 @@
 @extends('layouts.app')
 @section('title', 'Créer un étudiant')
 @section('content')
+<div class=" mx-5">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb p-3 bg-body-tertiary rounded-3">
+            <li class="breadcrumb-item"><a href="{{route('accueil')}}" class="text-dark fw-semibold text-decoration-none">Accueil</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Ajouter un étudiant</li>
+        </ol>
+    </nav>
+</div>
 
-<div class="col-4 m-auto my-5">
-    <div class="card border-0 shadow rounded-0 p-4 m-3">
+<div class="col-lg-6 col-md-8 col-sm-10 m-auto my-5">
+    <div class="card border-0 shadow rounded-0 p-4 m-5">
         <div class="card-header icon text-center">
             <h2>Ajouter un étudiant</h2>
             <i class="bi bi-person-lines-fill" style="font-size:1.5rem"></i>
@@ -53,7 +61,7 @@
                 @endif
 
                 <label for="city">Ville</label>
-                <select id="city" class="form-select" name="city_id">
+                <select id="city" class="form-select mb-3" name="city_id">
                     <option value="">Sélectionner une ville</option>
                     @foreach($cities as $city)
                     <option value="{{$city->id}}" @if ($city->id == old('city_id')) selected @endif>{{$city->name}}</option>
@@ -66,9 +74,10 @@
                 @endif
         </div>
         <div class="card-footer">
-            <div class="d-flex justify-content-between">
-                <div class="d-flex justify-content-center">
+            <div>
+                <div class="d-flex justify-content-between">
                     <button type="submit" class="btn btn-success">Sauvegarder</button>
+                    <a href="{{route('students.index')}}" class="btn btn-secondary">Annuler</a>
                 </div>
             </div>
         </div>
