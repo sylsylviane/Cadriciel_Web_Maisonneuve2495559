@@ -1,9 +1,19 @@
 @extends('layouts.app')
 @section('title', 'Étudiants')
 @section('content')
+<!-- FIL D'ARIANE -->
+<div class=" mx-5">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb p-3 bg-body-tertiary rounded-3">
+            <li class="breadcrumb-item"><a href="{{route('accueil')}}" class="text-dark text-decoration-none">Accueil</a></li>
+            <li class="breadcrumb-item"><a href="{{route('students.index')}}" class="text-dark text-decoration-none">Étudiants</a></li>
+            <li class="breadcrumb-item active text-dark fw-semibold" aria-current="page">{{ $student->name }}</li>
+        </ol>
+    </nav>
+</div>
 <!-- AFFICHAGE DES INFORMATIONS DE L'ÉTUDIANT -->
-<div class="col-md-6 m-auto my-5">
-    <div class="card text-center border-0 shadow rounded-0 p-4 m-3">
+<div class="col-md-6 m-auto">
+    <div class="card text-center border-0 shadow rounded-0 p-4 m-5">
         <div class="card-header icon text-end">
             <a href="{{route('students.index')}}" aria-label="close"><i class="bi bi-x-square" style="font-size: 1.5rem; color:black"></i></a>
         </div>
