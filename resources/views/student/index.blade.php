@@ -9,6 +9,9 @@
         </ol>
     </nav>
 </div>
+<div class="mx-5 mb-2 px-4 d-flex justify-content-end">
+    {{$students}}
+</div>
 <!-- Page content-->
 <div class="row mx-5">
     @foreach($students as $student)
@@ -34,5 +37,7 @@
     </div>
     @endforeach
 </div>
-
+<div class="mx-5 mt-4 px-4">
+    {{$students}}
+</div>
 @endsection
