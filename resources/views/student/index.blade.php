@@ -1,11 +1,19 @@
 @extends('layouts.app')
 @section('title', 'Étudiants')
 @section('content')
+<div class=" mx-5">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb p-3 bg-body-tertiary rounded-3">
+            <li class="breadcrumb-item"><a href="{{route('accueil')}}" class="text-dark text-decoration-none">Accueil</a></li>
+            <li class="breadcrumb-item active text-dark fw-semibold" aria-current="page">Étudiants</li>
+        </ol>
+    </nav>
+</div>
 <!-- Page content-->
-<div class="row m-5">
+<div class="row mx-5">
     @foreach($students as $student)
-    <div class="col-4">
-        <div class="card text-center border-0 shadow rounded-0 p-4 m-3">
+    <div class="col-lg-6">
+        <div class="card text-center border-0 shadow rounded-0 p-4 m-2">
             <div class="card-header icon">
                 <i class="bi bi-backpack" style="font-size: 1.5rem"></i>
             </div>
@@ -19,7 +27,7 @@
             </div>
             <div class="card-footer">
                 <div class="d-flex justify-content-center">
-                    <a href="{{route('student.show', $student->id)}}" class="btn btn-sm btn-outline-primary">Voir</a>
+                    <a href="{{route('student.show', $student->id)}}" class="btn btn-sm px-5 py-2 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 ">Voir</a>
                 </div>
             </div>
         </div>
