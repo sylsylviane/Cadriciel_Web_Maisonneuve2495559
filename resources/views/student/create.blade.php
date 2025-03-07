@@ -4,8 +4,8 @@
 <div class=" mx-5">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb p-3 bg-body-tertiary rounded-3">
-            <li class="breadcrumb-item"><a href="{{route('accueil')}}" class="text-dark fw-semibold text-decoration-none">Accueil</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Ajouter un étudiant</li>
+            <li class="breadcrumb-item"><a href="{{route('accueil')}}" class="text-dark text-decoration-none">Accueil</a></li>
+            <li class="breadcrumb-item active text-dark fw-semibold" aria-current="page">Ajouter un étudiant</li>
         </ol>
     </nav>
 </div>
