@@ -9,10 +9,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 
-<body class="d-flex flex-column min-vh-100 justify-content-between bg-light">
+<body class="d-flex flex-column min-vh-100 bg-light">
     <!-- NAVIGATION -->
     <nav class="navbar navbar-expand-lg navbar-light border-bottom py-4">
-        <div class="container">
+        <div class="container-fluid mx-5">
             <a class="navbar-brand" href="{{route('accueil')}}">{{ config('app.name' )}}</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -26,7 +26,7 @@
     </nav>
 
     <!-- CONTENU -->
-    <main>
+    <main class="flex-grow-1">
         @if(session('success'))
         <div class="alert alert-success alert-dismissible fade show" role="alert">
             {{session('success')}}
@@ -37,11 +37,11 @@
     </main>
 
     <!-- FOOTER-->
-    <footer class="py-4 border-top ">
+    <footer class="py-4 border-top mt-5">
         <p class="text-center text-body-secondary">Tous droits réservés &copy; {{ config('app.name')}} - {{date('Y')}}</p>
     </footer>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-<script src="../../js/app.js"></script>
+<script type="module" src="{{ asset('/js/app.js') }}"></script>
 
 </html>
