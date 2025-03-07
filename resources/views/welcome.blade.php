@@ -13,7 +13,6 @@
             <p class="lead">Nous avons créé cette plateforme pour que les étudiants du Collège Maisonneuve puissent fournir leurs informations personnelles de manière rapide, sécurisée et efficace. Vos données sont essentielles pour améliorer nos services et garantir une meilleure communication avec notre communauté étudiante.</p>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
                 <a href="{{route('students.index')}}" class="btn p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 ">Voir les étudiants</a>
-                <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button>
             </div>
         </div>
     </div>
