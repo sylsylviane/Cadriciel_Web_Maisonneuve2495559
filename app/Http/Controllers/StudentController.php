@@ -103,6 +103,6 @@ class StudentController extends Controller
     {
         $id = $student->id;
         $student->delete();
-        return redirect()->route('student.index')->with('success', 'L\'étudiant a été supprimé.');
+        return redirect()->route('students.index')->with('success', 'L\'étudiant a été supprimé.');
     }
 }
