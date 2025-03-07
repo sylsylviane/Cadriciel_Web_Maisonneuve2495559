@@ -1,10 +1,11 @@
 @extends('layouts.app')
 @section('title', 'Étudiants')
 @section('content')
-<div class="col-4 m-auto my-5">
+<!-- AFFICHAGE DES INFORMATIONS DE L'ÉTUDIANT -->
+<div class="col-md-6 m-auto my-5">
     <div class="card text-center border-0 shadow rounded-0 p-4 m-3">
-        <div class="card-header icon">
-            <i class="bi bi-backpack" style="font-size: 1.5rem"></i>
+        <div class="card-header icon text-end">
+            <a href="{{route('students.index')}}" aria-label="close"><i class="bi bi-x-square" style="font-size: 1.5rem; color:black"></i></a>
         </div>
         <div class=" card-body">
             <h5 class="card-title">{{ $student->name }}</h5>
@@ -16,8 +17,29 @@
         </div>
         <div class="card-footer">
             <div class="d-flex justify-content-between">
-                <a href="{{route('student.edit', $student->id)}}"><i class="bi bi-pencil-square" style="font-size: 1.5rem; color: green"></i></a>
-                <i class="bi bi-trash3 telx" style="font-size: 1.5rem; color:red"></i>
+                <a href="{{route('student.edit', $student->id)}}" aria-label="edit"><i class="bi bi-pencil-square" style="font-size: 1.5rem; color: green"></i></a>
+                <button type="button" class="btn btn-sm btn-outline-*" data-bs-toggle="modal" data-bs-target="#deleteModal" aria-label="delete">
+                    <i class="bi bi-trash3 telx" style="font-size: 1.5rem; color:red"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- MODALE -->
+<div class="modal fade " tabindex="-1" role="dialog" id="deleteModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content rounded-3 shadow">
+            <div class="modal-body p-4 text-center">
+                <h5 class="mb-0">Êtes-vous sûr de vouloir supprimer cet étudiant ?</h5>
+                <p class="mb-0">Cette action est irréversible.</p>
+            </div>
+            <div class="modal-footer flex-nowrap p-0 ">
+                <form method="POST" class="m-auto">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-lg btn-link fs-6 text-decoration-none col-6 py-3 m-0 rounded-0 "><strong class="text-danger">Supprimer</strong></button>
+                </form>
+                <button type="button" class="btn btn-lg btn-link fs-6 text-decoration-none col-6 py-3 m-0 rounded-0 border-start" data-bs-dismiss="modal">Annuler</button>
             </div>
         </div>
     </div>
