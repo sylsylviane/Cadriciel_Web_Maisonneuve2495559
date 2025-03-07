@@ -14,7 +14,7 @@ class StudentController extends Controller
      */
     public function index()
     {
-        $students = Student::all();
+        $students = Student::select()->orderby('name')->paginate(10);
         return view('student.index', ['students' => $students]);
     }
 
@@ -101,7 +101,6 @@ class StudentController extends Controller
      */
     public function destroy(Student $student)
     {
-        $id = $student->id;
         $student->delete();
         return redirect()->route('students.index')->with('success', 'L\'étudiant a été supprimé.');
     }
