@@ -1,9 +1,18 @@
 @extends('layouts.app')
 @section('title', 'Modifier un étudiant')
 @section('content')
-
-<div class="col-4 m-auto my-5">
-    <div class="card border-0 shadow rounded-0 p-4 m-3">
+<div class=" mx-5">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb p-3 bg-body-tertiary rounded-3">
+            <li class="breadcrumb-item"><a href="{{route('accueil')}}" class="text-dark text-decoration-none">Accueil</a></li>
+            <li class="breadcrumb-item"><a href="{{route('students.index')}}" class="text-dark text-decoration-none">Étudiants</a></li>
+            <li class="breadcrumb-item"><a href="{{route('student.show', $student->id)}}" class="text-dark text-decoration-none">{{ $student->name }}</a></li>
+            <li class="breadcrumb-item active text-dark fw-semibold" aria-current="page">Modifier un étudiant</li>
+        </ol>
+    </nav>
+</div>
+<div class="col-lg-6 col-md-8 col-sm-10 m-auto my-5">
+    <div class="card border-0 shadow rounded-0 p-4 m-5">
         <div class="card-header icon text-center">
             <h2>Modifier un étudiant</h2>
             <i class="bi bi-person-lines-fill" style="font-size:1.5rem"></i>
@@ -53,7 +62,7 @@
                 @endif
 
                 <label for="city">Ville</label>
-                <select id="city" class="form-select" name="city_id">
+                <select id="city" class="form-select mb-3" name="city_id">
                     <option value="">Sélectionner une ville</option>
                     @foreach($cities as $city)
                     <option value="{{$student->city->id}}" @if($student->city->id == $city->id) selected @endif>{{$city->name}}</option>
