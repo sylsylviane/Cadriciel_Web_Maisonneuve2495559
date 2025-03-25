@@ -20,5 +20,16 @@
     "Supprimer": "Supprimer",
     "etudiant_modifie_succes": "Les informations de l'étudiant ont été modifiées avec succès.",
     "etudiant_ajoute_succes": "L'étudiant a été ajouté avec succès.",
-    "etudiant_supprime_succes": "L'étudiant a été supprimé avec succès."
+    "etudiant_supprime_succes": "L'étudiant a été supprimé avec succès.",
+    "utilisateur_ajoute_succes": "L'utilisateur a été ajouté avec succès.",
+    "Connexion": "Connexion",
+    "Deconnexion": "Déconnexion",
+    "Mot de passe": "Mot de passe",
+    "Confirmer le mot de passe": "Confirmer le mot de passe",
+    "Veuillez vous connecter": "Veuillez vous connecter",
+    "Se souvenir de moi": "Se souvenir de moi",
+    "Se connecter": "Se connecter",
+    "S'inscrire": "S'inscrire", 
+    "Nom d'utilisateur": "Nom d'utilisateur"
 }
+ 

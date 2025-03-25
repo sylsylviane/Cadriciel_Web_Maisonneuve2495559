@@ -20,5 +20,16 @@
     "Supprimer": "Delete",
     "etudiant_modifie_succes": "The student's information has been updated.",
     "etudiant_ajoute_succes": "The student has been added.",
-    "etudiant_supprime_succes": "The student has been deleted."
+    "etudiant_supprime_succes": "The student has been deleted.",
+    "utilisateur_ajoute_succes": "The user has been added.",
+    "Connexion": "Login",
+    "Deconnexion": "Logout",
+    "Mot de passe": "Password",
+    "Confirmer le mot de passe": "Confirm password",
+    "Veuillez vous connecter": "Please login",
+    "Se souvenir de moi": "Remember me",
+    "Se connecter": "Login",
+    "S'inscrire": "Register",
+    "Nom d'utilisateur": "Username"
 }
+ 
