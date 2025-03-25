@@ -10,7 +10,7 @@
         </div>
         <div class="col-lg-6">
             <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">@lang('lang.bienvenue_titre')"</h1>
-            <p class="lead">@lang('lang.accueil_paragraphe')</p>
+            @lang('lang.accueil_paragraphe')
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
                 <a href="{{route('students.index')}}" class="btn p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 ">@lang('lang.texte_bouton')</a>
             </div>
