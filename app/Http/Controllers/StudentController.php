@@ -21,7 +21,7 @@ class StudentController extends Controller
     /**
      * Afficher le formulaire pour créer un nouvel étudiant.
      */
-    public function create() 
+    public function create()
     {
         $cities = City::all();
         return view('student.create', ['cities' => $cities]);
@@ -32,14 +32,16 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'name' => 'required|string|max:191',
-            'address' => 'required|string|max:191',
-            'phone' => 'required|string|max:191',
-            'email' => 'required|email|max:191',
-            'dob' => 'required|date|before:today',
-            'city_id' => 'required'
-        ]);
+        $request->validate(
+            [
+                'name' => 'required|string|max:191',
+                'address' => 'required|string|max:191',
+                'phone' => 'required|string|max:191',
+                'email' => 'required|email|max:191',
+                'dob' => 'required|date|before:today',
+                'city_id' => 'required'
+            ]
+        );
 
         $student = Student::create([
             'name' => $request->name,
@@ -50,7 +52,7 @@ class StudentController extends Controller
             'city_id' => $request->city_id
         ]);
 
-        return redirect()->route('student.show', $student->id)->with('success', 'L\'étudiant a été créé.');
+        return redirect()->route('student.show', $student->id)->with('success', __('etudiant_ajoute_succes'));
     }
 
     /**
@@ -93,7 +95,7 @@ class StudentController extends Controller
             'city_id' => $request->city_id
         ]);
 
-        return redirect()->route('student.show', $student->id)->with('success', 'Les informations de l\'étudiant ont été modifiés.');
+        return redirect()->route('student.show', $student->id)->with('success', __('etudiant_modifie_succes'));
     }
 
     /**
@@ -102,6 +104,6 @@ class StudentController extends Controller
     public function destroy(Student $student)
     {
         $student->delete();
-        return redirect()->route('students.index')->with('success', 'L\'étudiant a été supprimé.');
+        return redirect()->route('students.index')->with('success', __('etudiant_supprime_succes'));
     }
 }
