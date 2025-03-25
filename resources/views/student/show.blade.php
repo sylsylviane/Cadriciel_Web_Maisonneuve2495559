@@ -19,11 +19,11 @@
         </div>
         <div class=" card-body">
             <h5 class="card-title">{{ $student->name }}</h5>
-            <p class="card-text mb-1"><strong>Adresse: </strong>{{ $student->address }}</p>
-            <p class="card-text mb-1"><strong>Téléphone: </strong>{{ $student->phone }}</p>
-            <p class="card-text mb-1"><strong>Courriel: </strong>{{ $student->email }}</p>
-            <p class="card-text mb-1"><strong>Date de naissance: </strong>{{ $student->dob }}</p>
-            <p class="card-text mb-1"><strong>Ville: </strong>{{ $student->city->name }}</p>
+            <p class="card-text mb-1"><strong>@lang('Adresse'): </strong>{{ $student->address }}</p>
+            <p class="card-text mb-1"><strong>@lang('Téléphone'): </strong>{{ $student->phone }}</p>
+            <p class="card-text mb-1"><strong>@lang('Courriel'): </strong>{{ $student->email }}</p>
+            <p class="card-text mb-1"><strong>@lang('Date de naissance'): </strong>{{ $student->dob }}</p>
+            <p class="card-text mb-1"><strong>@lang('Ville'): </strong>{{ $student->city->name }}</p>
         </div>
         <div class="card-footer">
             <div class="d-flex justify-content-between">
