@@ -1,12 +1,12 @@
 @extends('layouts.app')
-@section('title', 'Étudiants')
+@section('title', trans('Étudiant'))
 @section('content')
 <!-- FIL D'ARIANE -->
 <div class=" mx-5">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb p-3 bg-body-tertiary rounded-3">
-            <li class="breadcrumb-item"><a href="{{route('accueil')}}" class="text-dark text-decoration-none">Accueil</a></li>
-            <li class="breadcrumb-item"><a href="{{route('students.index')}}" class="text-dark text-decoration-none">Étudiants</a></li>
+            <li class="breadcrumb-item"><a href="{{route('accueil')}}" class="text-dark text-decoration-none">@lang('Accueil')</a></li>
+            <li class="breadcrumb-item"><a href="{{route('students.index')}}" class="text-dark text-decoration-none">@lang('Étudiants')</a></li>
             <li class="breadcrumb-item active text-dark fw-semibold" aria-current="page">{{ $student->name }}</li>
         </ol>
     </nav>
@@ -40,16 +40,15 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content rounded-3 shadow">
             <div class="modal-body p-4 text-center">
-                <h5 class="mb-0">Êtes-vous sûr de vouloir supprimer cet étudiant ?</h5>
-                <p class="mb-0">Cette action est irréversible.</p>
+                @lang('lang.texte_modale_suppression')
             </div>
             <div class="modal-footer flex-nowrap p-0 ">
                 <form method="POST" class="m-auto">
                     @csrf
                     @method('DELETE')
-                    <button type="submit" class="btn btn-lg btn-link fs-6 text-decoration-none col-6 py-3 m-0 rounded-0 "><strong class="text-danger">Supprimer</strong></button>
+                    <button type="submit" class="btn btn-lg btn-link fs-6 text-decoration-none col-6 py-3 m-0 rounded-0 "><strong class="text-danger">@lang('Supprimer')</strong></button>
                 </form>
-                <button type="button" class="btn btn-lg btn-link fs-6 text-decoration-none col-6 py-3 m-0 rounded-0 border-start" data-bs-dismiss="modal">Annuler</button>
+                <button type="button" class="btn btn-lg btn-link fs-6 text-decoration-none col-6 py-3 m-0 rounded-0 border-start" data-bs-dismiss="modal">@lang('Annuler')</button>
             </div>
         </div>
     </div>
