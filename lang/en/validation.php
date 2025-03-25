@@ -169,41 +169,12 @@ return [
     |
     */
 
-    // 'custom' => [
-    //     'attribute-name' => [
-    //         'rule-name' => 'custom-message',
-    //     ],
-    // ],
     'custom' => [
-        'name' => [
-            'required' => 'Le nom est requis.',
-            'string' => 'Le nom doit être une chaîne de caractères.',
-            'max' => 'Le nom doit avoir moins de 191 caractères.'
-        ],
-        'address' => [
-            'required' => 'L\'adresse est requise.',
-            'string' => 'L\'adresse doit être une chaîne de caractères.',
-            'max' => 'L\'adresse doit avoir moins de 191 caractères.'
-        ],
-        'phone' => [
-            'required' => 'Le numéro de téléphone est requis.',
-            'string' => 'Le numéro de téléphone doit être une chaîne de caractères.',
-            'max' => 'Le numéro de téléphone doit avoir moins de 191 caractères.'
-        ],
-        'email' => [
-            'required' => 'Le courriel est requis.',
-            'email' => 'Le courriel doit être une adresse électronique valide.',
-            'max' => 'Le courriel doit avoir moins de 191 caractères.'
-        ],
-        'dob' => [
-            'required' => 'La date de naissance est requise.',
-            'date' => 'Le champ doit être une date valide.',
-            'before' => 'La date doit être une date antérieure à aujourd\'hui.',
-        ],
-        'city_id' => [
-            'required' => 'La ville est requise.',
+        'attribute-name' => [
+            'rule-name' => 'custom-message',
         ],
     ],
+
     /*
     |--------------------------------------------------------------------------
     | Custom Validation Attributes
@@ -215,6 +186,10 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'email' => 'email',
+        'dob' => 'date of Birth',
+        'city_id' => 'city'
+    ],
 
 ];
