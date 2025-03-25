@@ -16,5 +16,9 @@
     "Annuler": "Cancel",
     "Voir": "View",
     "Modifier un étudiant": "Edit a student",
-    "Modifier": "Edit"
+    "Modifier": "Edit",
+    "Supprimer": "Delete",
+    "etudiant_modifie_succes": "The student's information has been updated.",
+    "etudiant_ajoute_succes": "The student has been added.",
+    "etudiant_supprime_succes": "The student has been deleted."
 }

@@ -16,5 +16,9 @@
     "Annuler": "Annuler",
     "Voir": "Voir",
     "Modifier un étudiant": "Modifier un étudiant",
-    "Modifier": "Modifier"
+    "Modifier": "Modifier",
+    "Supprimer": "Supprimer",
+    "etudiant_modifie_succes": "Les informations de l'étudiant ont été modifiées avec succès.",
+    "etudiant_ajoute_succes": "L'étudiant a été ajouté avec succès.",
+    "etudiant_supprime_succes": "L'étudiant a été supprimé avec succès."
 }

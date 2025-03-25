@@ -189,7 +189,7 @@ return [
     'attributes' => [
         'email' => 'email',
         'dob' => 'date of Birth',
-        'city_id' => 'city'
+        'city_id' => 'city',
     ],
 
 ];
