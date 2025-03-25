@@ -24,4 +24,11 @@ class Student extends Model
     public function city(){
         return $this->belongsTo(City::class);
     }
+
+    // Mutateur pour le nom de l'étudiant : convertit la première lettre de chaque mot en majuscule et le reste en minuscule avant de l'enregistrer dans la base de données et prend en compte les caractères accentués (UTF-8)
+    public function setNameAttribute($value)
+    {
+        $this->attributes['name'] = mb_convert_case(mb_strtolower($value, 'UTF-8'), MB_CASE_TITLE, 'UTF-8'); 
+    }
 }
+
