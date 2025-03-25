@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\SetLocaleController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,3 +25,5 @@ Route::post('create/student', [StudentController::class, 'store'])->name('studen
 Route::get('/edit/student/{student}', [StudentController::class, 'edit'])->name('student.edit');
 Route::put('/edit/student/{student}', [StudentController::class, 'update'])->name('student.update');
 Route::delete('/student/{student}', [StudentController::class, 'destroy'])->name('student.delete');
+
+Route::get('/langue/{locale}', [SetLocaleController::class, 'setLocale'])->name('langue');
