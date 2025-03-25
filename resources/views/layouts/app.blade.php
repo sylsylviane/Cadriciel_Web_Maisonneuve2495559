@@ -21,8 +21,19 @@
                     <li class="nav-item"><a class="nav-link" href="{{route('accueil')}}">@lang('Accueil')</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{route('students.index')}}">@lang('Étudiants')</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{route('student.create')}}">@lang('Ajouter un étudiant')</a></li>
+
                 </ul>
                 <ul class="navbar-nav  mb-2 mb-sm-0">
+                    <li class="nav-item">
+                        <a href="{{ route('login') }}" class="nav-link btn px-2 py-1 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 ">@lang('Connexion')</a>
+
+                    </li>
+                    <li>
+                        <a href="{{ route('logout') }}" class="nav-link btn px-2 py-1 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">@lang('Deconnexion')</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('user.create') }}" class="nav-link btn px-2 py-1 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">@lang('S\'inscrire')</a>
+                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
                             aria-expanded="false">@lang('Langage') {{ $locale == '' ? '' : "($locale)" }}</a>
