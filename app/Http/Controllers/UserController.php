@@ -18,7 +18,7 @@ class UserController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Méthode pour afficher le formulaire de création d'un utilisateur.
      */
     public function create()
     {
@@ -26,21 +26,24 @@ class UserController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Méthode pour créer un nouvel utilisateur. 
      */
     public function store(Request $request)
     {
+        // Validation des données du formulaire
         $request->validate([
             'name' => 'required',
             'email' => 'required|email|unique:users',
             'password' => ['required', 'confirmed', Password::min(2)->max(20)->letters()->mixedCase()->numbers()],
         ]);
 
+        // Création de l'utilisateur
         $user = new User();
+        // Remplir les attributs de l'objet User avec les données de la requête
         $user->fill($request->all());
-        $user->save();
-
-        // 
+        // Enregistrer l'utilisateur dans la base de données
+        $user->save(); 
+        
         return redirect(route('accueil'))->with('success', __('utilisateur_ajoute_succes'));
     }
 
