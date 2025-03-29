@@ -12,27 +12,22 @@
 
 <body class="d-flex flex-column min-vh-100 bg-light">
     <!-- NAVIGATION -->
-    <nav class="navbar navbar-expand-lg navbar-light border-bottom py-4">
-        <div class="container-fluid mx-5">
-            <a class="navbar-brand" href="{{route('accueil')}}">{{ config('app.name' )}}</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary rounded p-3">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample11" aria-controls="navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse d-lg-flex" id="navbarSupportedContent">
+                <a class="navbar-brand col-lg-3 me-0" href="{{route('accueil')}}">{{ config('app.name' )}}</a>
+
+                <ul class="navbar-nav col-lg-6 justify-content-lg-center flex-grow-1">
                     <li class="nav-item"><a class="nav-link" href="{{route('accueil')}}">@lang('Accueil')</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{route('articles.index')}}">@lang('lang.consulter_forum')</a></li>
+                    @auth
                     <li class="nav-item"><a class="nav-link" href="{{route('students.index')}}">@lang('Étudiants')</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{route('student.create')}}">@lang('Ajouter un étudiant')</a></li>
-                    <li class="nav-item">
-                        @guest
-                        <a href="{{ route('login') }}" class="nav-link btn px-2 py-1 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 ">@lang('Connexion')</a>
-                    </li>
-                    <li>
-                        @else
-                        <a href="{{ route('logout') }}" class="nav-link btn px-2 py-1 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">@lang('Deconnexion')</a>
-                        @endguest
-                    </li>
-                    <li>
-                        <a href="{{ route('user.create') }}" class="nav-link btn px-2 py-1 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">@lang('S\'inscrire')</a>
-                    </li>
+                    @endauth
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
                             aria-expanded="false">@lang('Langage') {{ $locale == '' ? '' : "($locale)" }}</a>
@@ -42,6 +37,14 @@
                         </ul>
                     </li>
                 </ul>
+                <div class="d-lg-flex col-lg-3 justify-content-lg-end gap-3">
+                    @guest
+                    <a href="{{ route('login') }}" class="nav-link btn px-2 py-1 text-primary-emphasis border border-primary-subtle rounded-3">@lang('Connexion')</a>
+                    @else
+                    <a href="{{ route('logout') }}" class="nav-link btn px-2 py-1 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">@lang('Deconnexion')</a>
+                    @endguest
+                    <a href="{{ route('user.create') }}" class="nav-link btn px-2 py-1 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">@lang('S\'inscrire')</a>
+                </div>
             </div>
         </div>
     </nav>
