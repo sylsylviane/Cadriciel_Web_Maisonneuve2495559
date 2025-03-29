@@ -6,6 +6,7 @@ use App\Models\Student;
 use App\Models\City;
 use Illuminate\Http\Request;
 use PHPUnit\Framework\MockObject\Builder\Stub;
+use Illuminate\Support\Facades\Auth;
 
 class StudentController extends Controller
 {
@@ -32,6 +33,7 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
+        // Validation des données du formulaire
         $request->validate(
             [
                 'name' => 'required|string|max:191',
@@ -43,13 +45,15 @@ class StudentController extends Controller
             ]
         );
 
+        // Création de l'étudiant
         $student = Student::create([
             'name' => $request->name,
             'address' => $request->address,
             'phone' => $request->phone,
             'email' => $request->email,
             'dob' => $request->dob,
-            'city_id' => $request->city_id
+            'city_id' => $request->city_id,
+            'user_id' => Auth::user()->id // pour lier l'étudiant à l'utilisateur connecté
         ]);
 
         return redirect()->route('student.show', $student->id)->with('success', __('etudiant_ajoute_succes'));
@@ -77,6 +81,7 @@ class StudentController extends Controller
      */
     public function update(Request $request, Student $student)
     {
+        // Validation des données du formulaire
         $request->validate([
             'name' => 'required|string|max:191',
             'address' => 'required|string|max:191',
@@ -86,6 +91,7 @@ class StudentController extends Controller
             'city_id' => 'required'
         ]);
 
+        // Mise à jour de l'étudiant
         $student->update([
             'name' => $request->name,
             'address' => $request->address,
