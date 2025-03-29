@@ -1,12 +1,12 @@
 <?php
 
+use App\Http\Controllers\ArticleController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\SetLocaleController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,7 +16,7 @@ use App\Http\Controllers\UserController;
 | routes are loaded by the RouteServiceProvider and all of them will
 | be assigned to the "web" middleware group. Make something great!
 |
-*/
+*/ 
 
 // Accueil
 Route::get('/', function () {
@@ -24,13 +24,13 @@ Route::get('/', function () {
 })->name('accueil');
 
 // Students
-Route::get('/students', [StudentController::class, 'index'])->name('students.index');
-Route::get('/student/{student}', [StudentController::class, 'show'])->name('student.show');
-Route::get('create/student', [StudentController::class, 'create'])->name('student.create');
-Route::post('create/student', [StudentController::class, 'store'])->name('student.store');
-Route::get('/edit/student/{student}', [StudentController::class, 'edit'])->name('student.edit');
-Route::put('/edit/student/{student}', [StudentController::class, 'update'])->name('student.update');
-Route::delete('/student/{student}', [StudentController::class, 'destroy'])->name('student.delete');
+Route::get('/students', [StudentController::class, 'index'])->name('students.index')->middleware('auth');
+Route::get('/student/{student}', [StudentController::class, 'show'])->name('student.show')->middleware('auth');
+Route::get('create/student', [StudentController::class, 'create'])->name('student.create')->middleware('auth');
+Route::post('create/student', [StudentController::class, 'store'])->name('student.store')->middleware('auth');
+Route::get('/edit/student/{student}', [StudentController::class, 'edit'])->name('student.edit')->middleware('auth');
+Route::put('/edit/student/{student}', [StudentController::class, 'update'])->name('student.update')->middleware('auth');
+Route::delete('/student/{student}', [StudentController::class, 'destroy'])->name('student.delete')->middleware('auth');
 
 // Langue
 Route::get('/langue/{locale}', [SetLocaleController::class, 'setLocale'])->name('langue');
@@ -45,3 +45,9 @@ Route::get('/edit/user/{user}', [UserController::class, 'edit'])->name('user.edi
 Route::get('/login', [AuthController::class, 'create'])->name('login');
 Route::post('/login', [AuthController::class, 'store'])->name('login.store');
 Route::get('/logout', [AuthController::class, 'destroy'])->name('logout');
+
+// Forum
+// php artisan make:controller ForumController 
+Route::get('/articles', [ArticleController::class, 'index'])->name('articles.index')->middleware('auth');
+Route::get('create/article', [ArticleController::class, 'create'])->name('article.create')->middleware('auth');
+Route::post('create/article', [ArticleController::class, 'store'])->name('article.store')->middleware('auth');
