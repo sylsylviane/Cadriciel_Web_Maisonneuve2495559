@@ -42,4 +42,10 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    // Méthode pour définir la relation avec le modèle Student
+    public function student(){
+        // Un utilisateur peut avoir un étudiant associé
+        return $this->hasOne(Student::class);
+    }
 }
