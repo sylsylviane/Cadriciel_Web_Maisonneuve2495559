@@ -23,11 +23,25 @@
 
                 <ul class="navbar-nav col-lg-6 justify-content-lg-center flex-grow-1">
                     <li class="nav-item"><a class="nav-link" href="{{route('accueil')}}">@lang('Accueil')</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{route('articles.index')}}">@lang('lang.consulter_forum')</a></li>
-                    @auth
-                    <li class="nav-item"><a class="nav-link" href="{{route('students.index')}}">@lang('Étudiants')</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{route('student.create')}}">@lang('Ajouter un étudiant')</a></li>
-                    @endauth
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                            aria-expanded="false">@lang('lang.consulter_forum')</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{ route('article.index') }}">@lang('Voir tous les articles')</a></li>
+                            <li><a class="dropdown-item" href="{{ route('article.create') }}">@lang('Ajouter un article')</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                            aria-expanded="false">@lang('Étudiants')</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{route('students.index')}}">@lang('Voir tous les étudiants')</a></li>
+                            <li><a class="dropdown-item" href="{{ route('student.create') }}">@lang('Ajouter un étudiant')</a></li>
+                        </ul>
+                    </li>
+
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
                             aria-expanded="false">@lang('Langage') {{ $locale == '' ? '' : "($locale)" }}</a>
