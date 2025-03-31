@@ -15,6 +15,7 @@
     "Sauvegarder": "Sauvegarder",
     "Annuler": "Annuler",
     "Voir": "Voir",
+    "Voir tous les étudiants": "Voir tous les étudiants",
     "Modifier un étudiant": "Modifier un étudiant",
     "Modifier": "Modifier",
     "Supprimer": "Supprimer",
@@ -29,7 +30,19 @@
     "Veuillez vous connecter": "Veuillez vous connecter",
     "Se souvenir de moi": "Se souvenir de moi",
     "Se connecter": "Se connecter",
-    "S'inscrire": "S'inscrire", 
-    "Nom d'utilisateur": "Nom d'utilisateur"
+    "S'inscrire": "S'inscrire",  
+    "Nom d'utilisateur": "Nom d'utilisateur",
+    "Article en français": "Article en français",
+    "Article en anglais": "Article en anglais",
+    "Titre": "Titre",
+    "Contenu": "Contenu",
+    "Ajouter un article": "Ajouter un article",
+    "Modifier un article": "Modifier un article",
+    "article_supprime_succes": "L'article a été supprimé avec succès.",
+    "article_ajoute_succes": "L'article a été ajouté avec succès.",
+    "article_modifie_succes": "L'article a été modifié avec succès.",
+    "Voir tous les articles": "Voir tous les articles",
+    "Auteur": "Auteur",
+    "article_modifie_interdit": "Vous ne pouvez pas modifier cet article."
 }
  

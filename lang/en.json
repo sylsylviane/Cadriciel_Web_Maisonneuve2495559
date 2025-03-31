@@ -15,6 +15,7 @@
     "Sauvegarder": "Save",
     "Annuler": "Cancel",
     "Voir": "View",
+    "Voir tous les étudiants": "View all students",
     "Modifier un étudiant": "Edit a student",
     "Modifier": "Edit",
     "Supprimer": "Delete",
@@ -30,6 +31,18 @@
     "Se souvenir de moi": "Remember me",
     "Se connecter": "Login",
     "S'inscrire": "Register",
-    "Nom d'utilisateur": "Username"
+    "Nom d'utilisateur": "Username",
+    "Article en français": "Article in French",
+    "Article en anglais": "Article in English",
+    "Titre": "Title",
+    "Contenu": "Content",
+    "Ajouter un article": "Add an article",
+    "Modifier un article": "Edit an article",
+    "article_supprime_succes": "The article has been deleted.",
+    "article_ajoute_succes": "The article has been added.",
+    "article_modifie_succes": "The article has been updated.",
+    "Voir tous les articles": "View all articles",
+    "Auteur": "Author",
+    "article_modifie_interdit": "You cannot edit this article."
 }
  
