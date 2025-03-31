@@ -47,7 +47,10 @@ Route::post('/login', [AuthController::class, 'store'])->name('login.store');
 Route::get('/logout', [AuthController::class, 'destroy'])->name('logout');
 
 // Forum
-// php artisan make:controller ForumController 
-Route::get('/articles', [ArticleController::class, 'index'])->name('articles.index')->middleware('auth');
+Route::get('/articles', [ArticleController::class, 'index'])->name('article.index')->middleware('auth');
+Route::get('/article/{article}', [ArticleController::class, 'show'])->name('article.show')->middleware('auth');
 Route::get('create/article', [ArticleController::class, 'create'])->name('article.create')->middleware('auth');
 Route::post('create/article', [ArticleController::class, 'store'])->name('article.store')->middleware('auth');
+Route::get('/edit/article/{article}', [ArticleController::class, 'edit'])->name('article.edit')->middleware('auth');
+Route::put('/edit/article/{article}', [ArticleController::class, 'update'])->name('article.update')->middleware('auth');
+Route::delete('/article/{article}', [ArticleController::class, 'destroy'])->name('article.delete')->middleware('auth');
