@@ -1,16 +1,18 @@
 @extends('layouts.app')
 @section('title', trans('Modifier un article'))
 @section('content')
+<!-- FIL D'ARIANE -->
 <div class=" mx-5">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb p-3 bg-body-tertiary rounded-3">
             <li class="breadcrumb-item"><a href="{{route('accueil')}}" class="text-dark text-decoration-none">@lang('Accueil')</a></li>
-            <li class="breadcrumb-item"><a href="{{route('students.index')}}" class="text-dark text-decoration-none">@lang('Article')</a></li>
+            <li class="breadcrumb-item"><a href="{{route('article.index')}}" class="text-dark text-decoration-none">@lang('Articles')</a></li>
             <li class="breadcrumb-item"><a href="{{route('article.show', $article->id)}}" class="text-dark text-decoration-none">{{ $article->title ? $article->title[app()->getLocale()] ?? $article->title['fr'] : '' }}</a></li>
             <li class="breadcrumb-item active text-dark fw-semibold" aria-current="page">@lang('Modifier un article')</li>
         </ol>
     </nav>
 </div>
+<!-- FORMULAIRE DE MODIFICATION D'UN ARTICLE -->
 <div class="col-lg-6 col-md-8 col-sm-10 m-auto my-5">
     <div class="card border-0 shadow rounded-0 p-4 m-5">
         <div class="card-header icon text-center">
@@ -19,8 +21,6 @@
         </div>
         <div class=" card-body">
             <form method="POST">
-
-                <!-- TODO: -->
                 @csrf
                 @method('PUT')
                 <fieldset class="mb-3">
