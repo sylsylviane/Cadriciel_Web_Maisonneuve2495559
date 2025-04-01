@@ -1,17 +1,17 @@
 @extends('layouts.app')
-@section('title', trans('Articles'))
+@section('title', trans('Article'))
 @section('content')
 <!-- FIL D'ARIANE -->
 <div class=" mx-5">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb p-3 bg-body-tertiary rounded-3">
             <li class="breadcrumb-item"><a href="{{route('accueil')}}" class="text-dark text-decoration-none">@lang('Accueil')</a></li>
-            <li class="breadcrumb-item"><a href="{{route('article.index')}}" class="text-dark text-decoration-none">@lang('Article')</a></li>
+            <li class="breadcrumb-item"><a href="{{route('article.index')}}" class="text-dark text-decoration-none">@lang('Articles')</a></li>
             <li class="breadcrumb-item active text-dark fw-semibold" aria-current="page">{{ $article->title ? $article->title[app()->getLocale()] ?? $article->title['fr'] : '' }}</li>
         </ol>
     </nav>
 </div>
-<!-- AFFICHAGE DES INFORMATIONS DE L'ARTICLE -->
+<!-- AFFICHAGE DE L'ARTICLE -->
 <div class="col-md-6 m-auto">
     <div class="card text-center border-0 shadow rounded-0 p-4 m-5">
         <div class="card-header icon text-end">
@@ -23,6 +23,7 @@
             <p class="card-text mb-1"><strong>@lang('Date'): </strong>{{ $article->created_at }}</p>
             <p class="card-text mb-1"><strong>@lang('Auteur'): </strong>{{ $article->user_id }}</p>
         </div>
+        @if($article->user_id == auth()->user()->id)
         <div class="card-footer">
             <div class="d-flex justify-content-between">
                 <a href="{{route('article.edit', $article->id)}}" aria-label="edit"><i class="bi bi-pencil-square" style="font-size: 1.5rem; color: green"></i></a>
@@ -31,6 +32,7 @@
                 </button>
             </div>
         </div>
+        @endif
     </div>
 </div>
 <!-- MODALE -->
