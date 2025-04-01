@@ -9,10 +9,10 @@
             <img src="{{asset('img/etudiants.jpg')}}" class="d-block mx-lg-auto img-fluid w-100" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
         </div>
         <div class="col-lg-6">
-            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">@lang('lang.bienvenue_titre')"</h1>
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">@lang('lang.bienvenue_titre')</h1>
             @lang('lang.accueil_paragraphe')
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                <a href="{{route('students.index')}}" class="btn p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 ">@lang('lang.texte_bouton')</a>
+                <a href="{{route('students.index')}}" class="btn p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 ">@lang('lang.consulter_forum')</a>
             </div>
         </div>
     </div>
