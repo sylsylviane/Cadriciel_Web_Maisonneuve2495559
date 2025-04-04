@@ -1,9 +1,9 @@
 // import './bootstrap';
 
-const navLink = document.querySelectorAll('.nav-link');
+const navLinks = document.querySelectorAll('.nav-link');
 
 function init(){
-    navLink.forEach((link) => {
+    navLinks.forEach((link) => {
         let href = link.href;
         let current = document.location.href;
         if(href === current){
