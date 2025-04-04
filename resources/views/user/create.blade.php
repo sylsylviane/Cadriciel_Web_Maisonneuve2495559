@@ -1,17 +1,27 @@
 @extends('layouts.app')
 @section('title', trans('S\'inscrire'))
 @section('content')
+
+@if(!$errors->isEmpty())
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <ul>
+        @foreach($errors->all() as $error)
+        <li>{{$error}}</li>
+        @endforeach
+    </ul>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+@endif
 <div class="form-signin w-100 m-auto mt-5" style="max-width: 330px;">
-    <!-- TODO: AFFICHER LES ERREURS DE VALIDATION, LES OLD VALUE ET NAME -->
     <form method="POST">
         @csrf
         <h1 class="h3 mb-3 fw-normal">@lang('Connexion')</h1>
         <div class="form-floating ">
-            <input name="name" type="text" class="form-control rounded-bottom-0" id="floatingInput" placeholder="name@example.com">
+            <input name="name" type="text" class="form-control rounded-bottom-0" id="floatingInput" placeholder="name@example.com" value="{{old('name')}}">
             <label for="floatingInput">@lang('Nom d\'utilisateur')</label>
         </div>
         <div class="form-floating">
-            <input name="email" type="email" class="form-control rounded-0" id="floatingInput" placeholder="name@example.com">
+            <input name="email" type="email" class="form-control rounded-0" id="floatingInput" placeholder="name@example.com" value="{{old('email')}}">
             <label for="floatingInput">@lang('Courriel')</label>
         </div>
         <div class="form-floating">
