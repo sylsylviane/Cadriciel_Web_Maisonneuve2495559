@@ -43,6 +43,7 @@
     "article_modifie_succes": "The article has been updated.",
     "Voir tous les articles": "View all articles",
     "Auteur": "Author",
-    "article_modifie_interdit": "You cannot edit this article."
+    "article_modifie_interdit": "You cannot edit this article.",
+    "article_suppression_interdit": "You cannot delete this article."
 }
  

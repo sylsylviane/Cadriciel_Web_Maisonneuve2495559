@@ -43,6 +43,7 @@
     "article_modifie_succes": "L'article a été modifié avec succès.",
     "Voir tous les articles": "Voir tous les articles",
     "Auteur": "Auteur",
-    "article_modifie_interdit": "Vous ne pouvez pas modifier cet article."
+    "article_modifie_interdit": "Vous ne pouvez pas modifier cet article.",
+    "article_suppression_interdit": "Vous ne pouvez pas supprimer cet article."
 }
  
