@@ -119,6 +119,6 @@ class ArticleController extends Controller
     public function destroy(Article $article)
     {
         $article->delete();
-        return redirect()->route('articles.index')->with('success', __('article_supprime_succes'));
+        return redirect()->route('article.index')->with('success', __('article_supprime_succes'));
     }
 }
