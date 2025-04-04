@@ -7,6 +7,7 @@ use App\Http\Controllers\SetLocaleController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\FichierController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -54,3 +55,12 @@ Route::post('create/article', [ArticleController::class, 'store'])->name('articl
 Route::get('/edit/article/{article}', [ArticleController::class, 'edit'])->name('article.edit')->middleware('auth');
 Route::put('/edit/article/{article}', [ArticleController::class, 'update'])->name('article.update')->middleware('auth');
 Route::delete('/article/{article}', [ArticleController::class, 'destroy'])->name('article.delete')->middleware('auth');
+
+// Fichier
+Route::get('/files', [FichierController::class, 'index'])->name('file.index')->middleware('auth');
+Route::get('/file/{fichier}', [FichierController::class, 'show'])->name('file.show')->middleware('auth');
+Route::get('create/file', [FichierController::class, 'create'])->name('file.create')->middleware('auth');
+Route::post('create/file', [FichierController::class, 'store'])->name('file.store')->middleware('auth');
+Route::get('/edit/file/{fichier}', [FichierController::class, 'edit'])->name('file.edit')->middleware('auth');
+Route::put('/edit/file/{fichier}', [FichierController::class, 'update'])->name('file.update')->middleware('auth');
+Route::delete('/file/{fichier}', [FichierController::class, 'destroy'])->name('file.delete')->middleware('auth');
