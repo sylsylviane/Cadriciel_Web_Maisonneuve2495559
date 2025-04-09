@@ -11,7 +11,7 @@
     "Téléphone": "Phone",
     "Courriel": "Email",
     "Date de naissance": "Date of birth",
-    "Ville": "City",
+    "Ville": "City", 
     "Sélectionner une ville": "Select a city",
     "Sauvegarder": "Save", 
     "Annuler": "Cancel",
@@ -58,6 +58,8 @@
     "Modifier un fichier": "Edit a file",
     "fichier_cree_succes": "The file has been created.",
     "fichier_modifie_succes": "The file has been updated.",
-    "fichier_supprime_succes": "The file has been deleted."
+    "fichier_supprime_succes": "The file has been deleted.",
+    "Télécharger le fichier Word": "Download Word file",
+    "Télécharger le fichier ZIP": "Download ZIP file"
 }
  

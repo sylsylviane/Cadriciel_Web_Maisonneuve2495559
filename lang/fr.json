@@ -9,7 +9,7 @@
     "Nom": "Nom",
     "Adresse": "Adresse",
     "Téléphone": "Téléphone",
-    "Courriel": "Courriel",
+    "Courriel": "Courriel", 
     "Date de naissance": "Date de naissance", 
     "Ville": "Ville",
     "Sélectionner une ville": "Sélectionner une ville",
@@ -58,6 +58,8 @@
     "Modifier un fichier": "Modifier un fichier",
     "fichier_cree_succes": "Le fichier a été créé avec succès.",
     "fichier_modifie_succes": "Le fichier a été modifié avec succès.",
-    "fichier_supprime_succes": "Le fichier a été supprimé avec succès."
+    "fichier_supprime_succes": "Le fichier a été supprimé avec succès.",
+    "Télécharger le fichier Word": "Télécharger le fichier Word",
+    "Télécharger le fichier ZIP": "Télécharger le fichier ZIP"
 }
  
