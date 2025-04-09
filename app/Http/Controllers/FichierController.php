@@ -6,7 +6,7 @@ use App\Models\Fichier;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
+use Illuminate\Support\Facades\Storage;
 class FichierController extends Controller
 {
     /**
@@ -93,6 +93,11 @@ class FichierController extends Controller
         $file = $request->file_path;
         $link_file = $file->store('files', 'public'); // Enregistrer le fichier dans le dossier public/files
 
+        // Supprimer l'ancien fichier
+        if ($fichier->file_path){
+            Storage::disk('public')->delete($fichier->file_path);
+        }
+
         // Mettre à jour le fichier
         $fichier->update([
             'title' => $fichierTitle, 
@@ -107,6 +112,10 @@ class FichierController extends Controller
      */
     public function destroy(Fichier $fichier)
     {
+        // Supprimer le fichier du dossier public/files
+        if ($fichier->file_path) {
+            Storage::disk('public')->delete($fichier->file_path);
+        }
         $fichier->delete();
         return redirect()->route('file.index')->with('success', 'Fichier supprimé avec succès.');
     }
