@@ -48,4 +48,16 @@ class User extends Authenticatable
         // Un utilisateur peut avoir un étudiant associé
         return $this->hasOne(Student::class);
     }
+
+    // Méthode pour définir la relation avec le modèle Fichier
+    public function fichier(){
+        // Un utilisateur peut avoir plusieurs fichiers associés
+        return $this->hasMany(Fichier::class);
+    }
+    
+    // Méthode pour définir la relation avec le modèle Article
+    public function article(){
+        // Un utilisateur peut avoir plusieurs articles associés
+        return $this->hasMany(Article::class);
+    }
 }
