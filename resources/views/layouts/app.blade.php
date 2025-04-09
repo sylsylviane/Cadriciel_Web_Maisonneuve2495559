@@ -21,7 +21,7 @@
             <div class="collapse navbar-collapse d-lg-flex" id="navbarSupportedContent">
                 <a class="navbar-brand col-lg-3 me-0" href="{{route('accueil')}}">{{ config('app.name' )}}</a>
 
-                <ul class="navbar-nav col-lg-6 justify-content-lg-center flex-grow-1">
+                <ul class="navbar-nav col-lg-6 justify-content-lg-center flex-grow-1 gap-5">
                     <li class="nav-item"><a class="nav-link" href="{{route('accueil')}}">@lang('Accueil')</a></li>
 
                     <li class="nav-item dropdown">
@@ -39,6 +39,15 @@
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="{{route('students.index')}}">@lang('Voir tous les étudiants')</a></li>
                             <li><a class="dropdown-item" href="{{ route('student.create') }}">@lang('Ajouter un étudiant')</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                            aria-expanded="false">@lang('Répertoire de fichiers')</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{route('file.index')}}">@lang('Voir tous les fichiers')</a></li>
+                            <li><a class="dropdown-item" href="{{ route('file.create') }}">@lang('Ajouter un fichier')</a></li>
                         </ul>
                     </li>
 
