@@ -27,6 +27,7 @@
                 <h5 class="card-title">{{ $article->title ? $article->title[app()->getLocale()] ?? $article->title['fr'] : '' }}</h5>
                 <p class="card-text mb-1"><strong>@lang('Contenu'): </strong>{{ $article->content ? $article->content[app()->getLocale()] ?? $article->content['fr'] : '' }}</p>
                 <p class="card-text mb-1"><strong>@lang('Date'): </strong>{{ $article->created_at }}</p>
+                <p class="card-text mb-1"><strong>@lang('Auteur'): </strong>{{ $article->user->name }}</p>
             </div>
             <div class="card-footer">
                 <div class="d-flex justify-content-center">
