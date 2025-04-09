@@ -1,6 +1,7 @@
 {
     "Accueil": "Home",
     "Étudiants": "Students",
+    "Nom de l'étudiant": "Student name",
     "Ajouter un étudiant": "Add a student",
     "Langage": "Language",
     "Anglais": "English",
@@ -30,7 +31,7 @@
     "Veuillez vous connecter": "Please login",
     "Se souvenir de moi": "Remember me",
     "Se connecter": "Login",
-    "S'inscrire": "Register",
+    "S'inscrire": "Register", 
     "Nom d'utilisateur": "Username",
     "Article en français": "Article in French",
     "Article en anglais": "Article in English",
@@ -44,6 +45,15 @@
     "Voir tous les articles": "View all articles",
     "Auteur": "Author",
     "article_modifie_interdit": "You cannot edit this article.",
-    "article_suppression_interdit": "You cannot delete this article."
+    "article_suppression_interdit": "You cannot delete this article.",
+    "Ajouter un fichier": "Add a file",
+    "Fichier en français": "File in French",
+    "Fichier en anglais": "File in English",
+    "Fichier": "File",
+    "Fichiers": "Files",
+    "Voir tous les fichiers": "View all files",
+    "Répertoire de fichiers": "File directory",
+    "Voir le fichier": "View file",
+    "Nom du fichier": "File name"
 }
  

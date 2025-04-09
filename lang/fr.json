@@ -1,6 +1,7 @@
 {
     "Accueil": "Accueil",
     "Étudiants": "Étudiants",
+    "Nom de l'étudiant": "Nom de l'étudiant",
     "Ajouter un étudiant": "Ajouter un étudiant",
     "Langage": "Langage",
     "Anglais": "Anglais",
@@ -44,6 +45,15 @@
     "Voir tous les articles": "Voir tous les articles",
     "Auteur": "Auteur",
     "article_modifie_interdit": "Vous ne pouvez pas modifier cet article.",
-    "article_suppression_interdit": "Vous ne pouvez pas supprimer cet article."
+    "article_suppression_interdit": "Vous ne pouvez pas supprimer cet article.",
+    "Ajouter un fichier": "Ajouter un fichier",
+    "Fichier en français": "Fichier en français",
+    "Fichier en anglais": "Fichier en anglais",
+    "Fichier": "Fichier",
+    "Fichiers": "Fichiers",
+    "Voir tous les fichiers": "Voir tous les fichiers",
+    "Répertoire de fichiers": "Répertoire de fichiers",
+    "Voir le fichier": "Voir le fichier",
+    "Nom du fichier": "Nom du fichier"
 }
  
