@@ -29,7 +29,7 @@
                 class="embed-responsive-item border rounded shadow-sm"
                 width="100%"
                 height="1000px"
-                frameborder="0">
+                frameborder="0"> 
             </iframe>
 
             <!-- Lien pour les fichiers Word -->
@@ -41,12 +41,6 @@
             @elseif(str_ends_with($fichier->fichierUrl(), '.zip'))
             <a href="{{ $fichier->fichierUrl() }}" class="btn btn-primary" target="_blank">
                 @lang('Télécharger le fichier ZIP')
-            </a>
-            @else
-            <!-- Message pour fichiers non pris en charge -->
-            <p>@lang('Ce type de fichier ne peut pas être affiché directement.')</p>
-            <a href="{{ $fichier->fichierUrl() }}" class="btn btn-primary" target="_blank">
-                @lang('Télécharger le fichier')
             </a>
             @endif
         </div>
