@@ -1,66 +1,42 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Site web dynamique en utilisant le cadriciel Laravel
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Projet réalisé dans le cadre de cours Cadriciel (Session 4)
 
-## About Laravel
+## Contexte du travail pratique 1
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Ce mandat implique la création d'un site Internet visant à collecter des informations auprès des
+étudiants du Collège Maisonneuve. De plus, il est envisagé de développer un réseau social pour
+les étudiants à l'avenir.
+La première étape consiste à collecter les informations nécessaires, à remplir la base de
+données avec des données aléatoires, et à créer des interfaces fonctionnelles permettant de
+visualiser, saisir, mettre à jour et supprimer les informations des étudiants.
+La base de données initiale comprendra deux tables : "Étudiant" (id, nom, adresse, téléphone,
+email, date de naissance, ville_id) et "Ville" (id, nom).
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Contexte du travail pratique 2
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+À partir du travail pratique 1, apporter les améliorations demandées au projet.
 
-## Learning Laravel
+Félicitations, votre client a apprécié votre premier projet et aimerait vous offrir un
+deuxième mandat pour améliorer le réseau social du collège.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- Le client souhaite maintenant ajouter une page de connexion pour que chaque
+élève puisse se connecter à son propre compte, la table étudiante doit donc être
+connectée à la table utilisateur (users). Pour maintenir la sécurité du système, le
+mot de passe doit être crypté
+- Étant donné que les étudiants du collégial sont polyglottes, le client vous a
+demandé de créer un système multilingue, français en anglais. Tout le contenu du
+système doit être dans les deux langues
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Pour compléter le système et le mettre en production, le client a demandé 2 autres
+modifications majeures
+- Un forum
+    - Le système doit avoir un forum dans lequel les étudiants peuvent écrire des
+articles. Les articles doivent être visibles par tous les étudiants connectés. Seul
+l'étudiant qui a écrit l'article peut le modifier et/ou le supprimer
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- Un répertoire de documents
+    - Pour compléter, le système doit disposer d'un répertoire de fichiers, dans lequel
+les étudiants peuvent partager des documents au format pdf, zip et doc. Ce
+répertoire doit être accessible par tous les étudiants connectés. Seul l'élève qui a
+partagé le document peut le modifier et/ou le supprimer
