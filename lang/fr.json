@@ -10,7 +10,7 @@
     "Adresse": "Adresse",
     "Téléphone": "Téléphone",
     "Courriel": "Courriel",
-    "Date de naissance": "Date de naissance",
+    "Date de naissance": "Date de naissance", 
     "Ville": "Ville",
     "Sélectionner une ville": "Sélectionner une ville",
     "Sauvegarder": "Sauvegarder",
@@ -54,6 +54,10 @@
     "Voir tous les fichiers": "Voir tous les fichiers",
     "Répertoire de fichiers": "Répertoire de fichiers",
     "Voir le fichier": "Voir le fichier",
-    "Nom du fichier": "Nom du fichier"
+    "Nom du fichier": "Nom du fichier",
+    "Modifier un fichier": "Modifier un fichier",
+    "fichier_cree_succes": "Le fichier a été créé avec succès.",
+    "fichier_modifie_succes": "Le fichier a été modifié avec succès.",
+    "fichier_supprime_succes": "Le fichier a été supprimé avec succès."
 }
  

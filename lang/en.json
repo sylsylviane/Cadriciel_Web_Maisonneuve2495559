@@ -13,7 +13,7 @@
     "Date de naissance": "Date of birth",
     "Ville": "City",
     "Sélectionner une ville": "Select a city",
-    "Sauvegarder": "Save",
+    "Sauvegarder": "Save", 
     "Annuler": "Cancel",
     "Voir": "View",
     "Voir tous les étudiants": "View all students",
@@ -54,6 +54,10 @@
     "Voir tous les fichiers": "View all files",
     "Répertoire de fichiers": "File directory",
     "Voir le fichier": "View file",
-    "Nom du fichier": "File name"
+    "Nom du fichier": "File name",
+    "Modifier un fichier": "Edit a file",
+    "fichier_cree_succes": "The file has been created.",
+    "fichier_modifie_succes": "The file has been updated.",
+    "fichier_supprime_succes": "The file has been deleted."
 }
  
