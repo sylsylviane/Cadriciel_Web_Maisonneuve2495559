@@ -54,7 +54,7 @@ class FichierController extends Controller
             'file_path' => $link_file, // Chemin du fichier
         ]); 
 
-        return redirect()->route('file.show', $fichier->id)->with('success', 'Fichier créé avec succès.');
+        return redirect()->route('file.show', $fichier->id)->with('success', __('fichier_cree_succes')); 
     }
 
     /**
@@ -104,7 +104,7 @@ class FichierController extends Controller
             'user_id' => Auth::user()->id,
             'file_path' => $link_file, // Chemin du fichier
         ]);
-        return redirect()->route('file.show', $fichier->id)->with('success', 'Fichier mis à jour avec succès.');
+        return redirect()->route('file.show', $fichier->id)->with('success', __('fichier_modifie_succes'));
     }
 
     /**
@@ -117,6 +117,6 @@ class FichierController extends Controller
             Storage::disk('public')->delete($fichier->file_path);
         }
         $fichier->delete();
-        return redirect()->route('file.index')->with('success', 'Fichier supprimé avec succès.');
+        return redirect()->route('file.index')->with('success', __('fichier_supprime_succes'));
     }
 }
